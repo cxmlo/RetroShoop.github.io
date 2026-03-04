@@ -284,6 +284,7 @@ if(isset($_SESSION['correo'])) {
             <a href="register.php" class="btn btn-register">Registrarse</a>
         </div>
     </div>
+    <?php include 'boton.php'; ?>
 
     <script>
         const canvas = document.getElementById('topoCanvas');
@@ -574,4 +575,5 @@ if(isset($_SESSION['correo'])) {
         requestAnimationFrame(animate);
     </script>
 </body>
+
 </html>
