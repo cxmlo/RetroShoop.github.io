@@ -2,17 +2,4 @@
 
 root * /app
 
-# Bloquear archivos sensibles
-@blocked {
-    path /conexion.php /seguridad.php /config_email.php
-}
-respond @blocked 403
-
-# Headers de seguridad
-header {
-    X-XSS-Protection "1; mode=block"
-    X-Content-Type-Options "nosniff"
-    X-Frame-Options "SAMEORIGIN"
-}
-
 php_server
