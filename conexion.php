@@ -1,8 +1,8 @@
 <?php
-$host = "sql105.infinityfree.com";
-$usuario = "if0_40086036";
-$password = "5HSZoFtZkoS";
-$base_datos = "if0_40086036_ropa";
+$host = "maglev.proxy.rlwy.net";
+$usuario = "root";
+$password = "CozNdFsyyzdJLykxStvonkYOpnqqnfMv";
+$base_datos = "railway";
 
 // Conexión PDO (Segura - nueva)
 try {
