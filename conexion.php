@@ -3,11 +3,12 @@ $host = "maglev.proxy.rlwy.net";
 $usuario = "root";
 $password = "CozNdFsyyzdJLykxStvonkYOpnqqnfMv";
 $base_datos = "railway";
+$puerto = "43717";
 
-// Conexión PDO (Segura - nueva)
+// Conexión PDO
 try {
     $pdo = new PDO(
-        "mysql:host=$host;dbname=$base_datos;charset=utf8mb4", 
+        "mysql:host=$host;port=$puerto;dbname=$base_datos;charset=utf8mb4", 
         $usuario, 
         $password,
         [
@@ -17,12 +18,11 @@ try {
         ]
     );
 } catch(PDOException $e) {
-    error_log("Error PDO: " . $e->getMessage());
-    die("Error de conexión");
+    die("Error PDO: " . $e->getMessage());
 }
 
-// MySQLi (para compatibilidad con código antiguo)
-$conexion = mysqli_connect($host, $usuario, $password, $base_datos);
+// MySQLi
+$conexion = mysqli_connect($host, $usuario, $password, $base_datos, $puerto);
 
 if(!$conexion) {
     die("Error mysqli: " . mysqli_connect_error());
