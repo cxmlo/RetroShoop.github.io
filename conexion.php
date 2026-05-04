@@ -1,9 +1,9 @@
 <?php
-$host = "maglev.proxy.rlwy.net";
-$usuario = "root";
-$password = "CozNdFsyyzdJLykxStvonkYOpnqqnfMv";
-$base_datos = "railway";
-$puerto = "43717";
+$host = "";
+$usuario = "";
+$password = "";
+$base_datos = "y";
+$puerto = "";
 
 // Conexión PDO
 try {
